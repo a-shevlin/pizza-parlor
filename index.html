@@ -6,27 +6,101 @@
   <script src="js/jquery-3.6.0.js"></script>
   <script src="js/scripts.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=Fascinate&family=Monofett&family=Press+Start+2P&display=swap" rel="stylesheet">
-  <title></title>
+  <title>Pizza Time</title>
 </head>
 <body>
   <div>
     <div>
       <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">Pizza Time</a>
+        <a class="navbar-brand" href="#">Main</a>
       </nav>
     </div>
   </div>
   <div class="jumbotron jumbotron-fluid">
     <div class="container">
-      <h1>Pizza Time</h1>
+      <h1>Pizza Time's Pizza Parlor</h1>
+      <h6>As seen on tv in the hit movie Spider-Man 2</h6>
     </div>
   </div>
-  <div class="container mainPage">
-    <button id="start" class="btn">Start Order!</button>
-  </div>
-  <div class="contianer pizzaForm">
+  <div class="container">
+    <div class="mainPage">
+      <button id="start" class="btn">Start Order!</button>
+    </div>
+    <div class="pizzaForm">
     <div class="row">
-      <form id="pizza"></form>
+      <form id="pizza">
+        <div class="col-sm-12">
+          <h2>Select a Size</h2>
+          <select class="form-control" id="sizeList">
+            <option value="12">12"</option>
+            <option value="16">16"</option>
+            <option value="20">20"</option>
+            <option value="24">24"</option>
+          </select>
+        </div>
+        <div class="col-sm-12">
+          <h2>Select a Sauce</h2>
+          <select class="form-control" id="sauceList">
+            <option value="Marinara">Marinara</option>
+            <option value="Pesto">Pesto</option>
+            <option value="Alfredo">Alfredo</option>
+          </select>
+        </div>
+        <div class="col-sm-12">
+          <h2>Select a Dipping Sauce</h2>
+          <select class="form-control" id="dipList">
+            <option value="Marinara">Marinara</option>
+            <option value="Ranch">Ranch</option>
+            <option value="Blue Cheese">Blue Cheese</option>
+          </select>
+        </div>
+        <div>
+          <h2>Select your Toppings: $1 Each</h2>
+        </div>
+        <div class="toppingList">
+          <input type="checkbox" name="topping" value="pepperoni"/>
+          <label for="pepperoni">Pepperoni</label>
+          <br>
+          <input type="checkbox" name="topping" value="pineapple"/>
+          <label for="pineapple">Pineapple</label>
+          <br>
+          <input type="checkbox" name="topping" value="ham"/>
+          <label for="ham">Ham</label>
+          <br>
+          <input type="checkbox" name="topping" value="mushroom"/>
+          <label for="mushroom">Mushroom</label>
+          <br>
+          <input type="checkbox" name="topping" value="olive"/>
+          <label for="olive">Olive</label>
+          <br>
+          <input type="checkbox" name="topping" value="onion"/>
+          <label for="onion">Onion</label>
+          <br>
+          <input type="checkbox" name="topping" value="sausage"/>
+          <label for="sausage">Sausage</label>
+          <br>
+          <input type="checkbox" name="topping" value="basil"/>
+          <label for="basil">Basil</label>
+          <br>
+          <input type="checkbox" name="topping" value="tomato"/>
+          <label for="tomato">Tomato</label>
+          <br>
+          <input type="checkbox" name="topping" value="spinach"/>
+          <label for="spinach">Spinach</label>
+          <br>
+        </div>
+        <button id="howmuch-button" class="btn btn-secondary">How much is it?</button>
+        <button id="buy-button" class="btn btn-secondary" type="submit" disabled>Buy!</button>
+      </form>
+      <div class="cart">
+        <h4>Your total is: <span id="pizza-price"></span></h4>
+        <p id="pizza-price-msg"></p>
+      </div>
+      <div class="reciept">
+        <h5>Your Order</h5>
+        <ul id="pizza-items-list">
+        </ul>
+      </div>
     </div>
   </div>
 </body>

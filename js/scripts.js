@@ -46,10 +46,28 @@ Pizza.prototype.finalPrice = function() {
 }
 
 $(document).ready(function() {
-
   $('#start').click(function(event) {
     event.preventDefault();
-    $('.pizzaForm').show();
-    $('.mainPage').hide();
+    $('.mainPage').fadeOut('fast');
+    $('.pizzaForm').fadeIn();
+  })
+
+  $("form#pizza").submit(function(event) {
+    event.preventDefault();
+
+    const size = $('select#sizeList').val();
+    const sauce = $('select#sauceList').val();
+    const dip = $('select#dipList').val();
+    let topping = [];
+
+    $('input:checkbox[name=topping]:checked').each(function() {
+      topping.push($(this).val());
+    });
+
+    let pizza1 = new Pizza(size, sauce, dip);
+    pizza1.topping.push(topping);
+    let cost1 = pizza1.finalPrice();
+
+    $()
   })
 })

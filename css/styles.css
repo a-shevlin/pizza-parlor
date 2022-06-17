@@ -4,6 +4,7 @@
   font-family: 'Press Start 2P', cursive;
   color: rgb(233, 255, 238);
   border: inset 5px rgba(39, 156, 64, 0.863);
+  border-radius: 20px;
   box-shadow: 0 3px rgb(105, 134, 110);
 }
 
