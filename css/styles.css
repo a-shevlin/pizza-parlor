@@ -1,0 +1,22 @@
+#start {
+  margin: 5px;
+  background: rgba(4, 85, 4, 0.801);
+  font-family: 'Press Start 2P', cursive;
+  color: rgb(233, 255, 238);
+  border: inset 5px rgba(39, 156, 64, 0.863);
+  box-shadow: 0 3px rgb(105, 134, 110);
+}
+
+#start:hover {
+  background: rgba(27, 51, 27, 0.726);
+}
+
+#start:active {
+  background: rgba(27, 51, 27, 0.726);
+  box-shadow: 0 1px rgb(68, 88, 71);
+  transform: translateY(2px);
+}
+
+.pizzaForm {
+  display: none;
+}

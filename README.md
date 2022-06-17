@@ -41,9 +41,7 @@ Test1: "Create a pizza with size, sauce, and dipping sauce."
 Code: new Pizza('Small', 'Red Sauce', 'Ranch');
 Expected Output: {size: 'Small', sauce: 'Red Sauce', dipSauce: 'Ranch'}
 
-Describe: Pizza.finalPrice()
-
-Test1: "Add price of each size, sauce, and dipping sauce to finalPrice variable."
+Test2: "Add price of each size, sauce, and dipping sauce to finalPrice variable."
 Code:  
 let pizza1 = new Pizza("12", "Pesto", "Ranch");
 pizza1.finalPrice();

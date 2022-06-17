@@ -47,4 +47,9 @@ Pizza.prototype.finalPrice = function() {
 
 $(document).ready(function() {
 
+  $('#start').click(function(event) {
+    event.preventDefault();
+    $('.pizzaForm').show();
+    $('.mainPage').hide();
+  })
 })
