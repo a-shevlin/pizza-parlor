@@ -12,7 +12,7 @@
 
 ## Description
 
-_This webpage allows users to input a number. By clicking Generate the number creates an array from 0 through the number. After turning the array into a string it finds and replaces 3, 2, and 1 with preset strings and prints it underneath the generate button._
+_This webpage allows users to select a pizza by size, sauce, topping, and dipping sauce. By clicking 'How much is it?' the price of the pizza will display underneath the form. Now the buy button is enabled and the user can buy the calculated price of the pizza. The receipt is then displayed on 'Buy!' and the user can re-enter pizza options to have another receipt shown underneath the first one._
 
 _The link for this webpage can be found [here](a-shevlin.github.io/pizza-parlor)._
 
@@ -24,7 +24,7 @@ _The link for this webpage can be found [here](a-shevlin.github.io/pizza-parlor)
 
 # Known Bugs
 
-* No known bugs
+* toppings array displays as Array(1) within Pizza object and will not append to page.
 
 ## License
 
@@ -46,4 +46,10 @@ Code:
 let pizza1 = new Pizza("12", "Pesto", "Ranch");
 pizza1.finalPrice();
 Expected Output: 6;
+
+Test3: "Add topping price to finalPrice variable."
+Code:  
+let pizza1 = new Pizza("12", "Pesto", "Ranch", ["Pepperoni", "Olive", "Mushroom"]);
+pizza1.finalPrice();
+Expected Output: 9;
 ```
