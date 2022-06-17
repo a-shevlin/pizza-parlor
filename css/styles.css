@@ -110,14 +110,20 @@ body {
   transform: translateY(2px);
 }
 
-
-
 #cart {
   display: none;
   text-align: center;
+  background-color:rgba(136, 29, 29, 0.733);
+  border-radius: 30px;
+  padding: 20px;
+  margin: 30px;
 }
 
 #receipt {
   display: none;
   text-align: center;
+  background-color:rgba(136, 29, 29, 0.733);
+  border-radius: 30px;
+  padding: 20px;
+  margin: 30px;
 }

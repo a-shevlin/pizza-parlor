@@ -1,17 +1,3 @@
-// function Sold() {
-//   this.pizzas = {};
-//   this.currentId = 0;
-// }
-
-// Sold.prototype.addPizza = function(pizza) {
-//   pizza.id = this.assignId();
-//   this.pizzas[pizza.id] = pizza;
-// }
-
-// Sold.prototype.assignId = function() {
-//   this.currentId += 1;
-//   return this.currentId;
-// }
 function Pizza(size, sauce, dipSauce) {
   this.size = size;
   this.sauce = sauce;
@@ -64,8 +50,6 @@ Pizza.prototype.finalPrice = function() {
   return finalPrice;
 }
 
-// let sold = Sold();
-
 $(document).ready(function() {
   $('#start').click(function(event) {
     event.preventDefault();
@@ -98,26 +82,33 @@ function getPizza() {
   const size = $('select#sizeList').val();
   const sauce = $('select#sauceList').val();
   const dipSauce = $('select#dipList').val();
-  let toppings = [];
   let newPizza = new Pizza(size, sauce, dipSauce);
+  let topping = [];
+  for (let i = 0; i < newPizza.toppings.length; i++) {
+    topping[i] = newPizza.toppings[i];
+  }
   $('input:checkbox[name=topping]:checked').each(function() {
-    toppings.push($(this).val());
+    topping.push($(this).val());
   });
-  console.log(toppings);
-  newPizza.toppings.push(toppings);
+  console.log(topping);
+  newPizza.toppings.push(topping);
   console.log(newPizza);
   return newPizza;
 }
 
 function attachSoldPizzas(pizza) {
   let cost1 = pizza.finalPrice();
-  //let toppingsArray = pizza.toppings;
+  let topping = [];
+  for (let i = 0; i < pizza.toppings[0].length; i++) {
+    topping[i] = pizza.toppings[i];
+  }
+  console.log(topping);
   const size = document.createElement('p');
   size.innerHTML = "A " + pizza.size + "\" Pizza";
   const sauce = document.createElement('p');
   sauce.innerHTML = "with " + pizza.sauce;
-  //const toppings = document.createElement('p');
-  //toppings.innerHTML = toString(toppingArray) + " for toppings.";
+  const toppings = document.createElement('p');
+  toppings.innerHTML = toString(topping) + " for toppings.";
   const dip = document.createElement('p');
   dip.innerHTML = pizza.dipSauce + " on the side.";
   const price = document.createElement('p');
@@ -126,9 +117,7 @@ function attachSoldPizzas(pizza) {
   size.appendChild(sauce);
   size.appendChild(dip);
   size.appendChild(price);
-  if (pizza.toppings.length > 1) {
-    size.appendChild(toppings);
-  }
+  //size.appendChild(toppings);
   console.log(size);
   $('.pizza-item-list').append(size);
 }
@@ -137,46 +126,3 @@ function clearPizzaForm() {
   $('input:checkbox[name=topping]').prop('checked', false);
   $('.cart').toggle();
 }
-
-//switch case for finalPrice
-  // for (topping in topping) {
-  //   finalPrice += 1
-  // }
-
-  // switch (size) {
-  //   case("12"):
-  //     finalPrice += 4;
-  //   case("16"):
-  //     finalPrice += 6;
-  //   case("20"):
-  //     finalPrice += 7;
-  //   case("24"):
-  //     finalPrice += 8;
-  //     break;
-  //   default:
-  //     console.log("Not pizza Size")
-  // }
-
-  // switch (sauce) {
-  //   case("Marinara"):
-  //     finalPrice += 0;
-  //   case("Pesto"):
-  //     finalPrice += 1;
-  //   case("Alfredo"):
-  //     finalPrice += 1;
-  //     break;
-  //   default:
-  //     console.log("Not pizza sauce")
-  // }
-
-  // switch (dipSauce) {
-  //   case("Marinara"):
-  //     finalPrice += 0;
-  //   case("Pesto"):
-  //     finalPrice += 1;
-  //   case("Alfredo"):
-  //     finalPrice += 1;
-  //     break;
-  //   default:
-  //     console.log("Not pizza sauce")
-  // }
