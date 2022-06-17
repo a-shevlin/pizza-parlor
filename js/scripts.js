@@ -111,12 +111,13 @@ function getPizza() {
 
 function attachSoldPizzas(pizza) {
   let cost1 = pizza.finalPrice();
+  let toppingArray = pizza.toppings;
   const size = document.createElement('p');
   size.innerHTML = "A " + pizza.size + "\" Pizza";
   const sauce = document.createElement('p');
   sauce.innerHTML = "with " + pizza.sauce;
   const toppings = document.createElement('p');
-  toppings.innerHTML = toString(pizza.topping) + " for toppings.";
+  toppings.innerHTML = toString(toppingArray) + " for toppings.";
   const dip = document.createElement('p');
   dip.innerHTML = pizza.dipSauce + " on the side.";
   const price = document.createElement('p');

@@ -11,8 +11,11 @@
 <body>
   <div>
     <div>
-      <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">Main</a>
+      <nav class="navbar navbar-expand-sm">
+        <a class="navbar-brand" href="#">Home</a>
+        <span class="welcomeText">
+          Welcome to Joe's Pizza!
+        </span>
       </nav>
     </div>
   </div>
@@ -26,8 +29,8 @@
     <div class="mainPage d-flex justify-content-center">
       <button id="start" class="btn">Start Order!</button>
     </div>
-    <div class="pizzaForm d-flex justify-content-center">
-      <div class="row">
+    <div class="pizzaForm">
+      <div class="row d-flex justify-content-center spider">
         <form id="pizza">
           <div class="col-sm-12">
             <h2>Select a Size</h2>
@@ -89,8 +92,10 @@
             <label for="spinach">Spinach</label>
             <br>
           </div>
-          <button id="howmuch-button" class="btn btn-secondary">How much is it?</button>
-          <button id="buy-button" class="btn btn-secondary" type="submit" disabled>Buy!</button>
+          <div class="buttonGroup d-flex justify-content-center">  
+            <button id="howmuch-button" class="btn btn-secondary">How much is it?</button>
+            <button id="buy-button" class="btn btn-secondary" type="submit" disabled>Buy!</button>
+          </div>
         </form>
         </div>
       </div>
