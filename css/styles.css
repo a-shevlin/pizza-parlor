@@ -1,19 +1,79 @@
+body {
+  background-color: rgba(0, 16, 160, 0.801);
+  background-image: url(../img/felt.png);
+  color: rgb(233, 255, 238);
+}
+
+.jumbotron {
+  background: rgba(231, 31, 31, 0.774);
+  font-family: 'Fascinate', cursive;
+  text-align: center;
+}
+
+.jumbotron h1 {
+  font-size: 70px;
+}
+
+.jumbotron h6 {
+  font-size: 24px;
+}
+
 #start {
   margin: 5px;
-  background: rgba(4, 85, 4, 0.801);
+  background: rgba(165, 24, 24, 0.815);
   font-family: 'Press Start 2P', cursive;
   color: rgb(233, 255, 238);
-  border: inset 5px rgba(39, 156, 64, 0.863);
+  border: inset 5px rgba(156, 53, 39, 0.863);
   border-radius: 20px;
-  box-shadow: 0 3px rgb(105, 134, 110);
+  box-shadow: 0 3px rgb(105, 105, 134);
 }
 
 #start:hover {
-  background: rgba(27, 51, 27, 0.726);
+  background: rgba(139, 43, 46, 0.829);
 }
 
 #start:active {
-  background: rgba(27, 51, 27, 0.726);
+  background: rgba(117, 29, 29, 0.726);
+  box-shadow: 0 1px rgb(68, 88, 71);
+  transform: translateY(2px);
+}
+
+#howmuch-button {
+  margin: 5px;
+  background: rgba(165, 24, 24, 0.815);
+  font-family: 'Press Start 2P', cursive;
+  color: rgb(233, 255, 238);
+  border: inset 5px rgba(156, 53, 39, 0.863);
+  border-radius: 20px;
+  box-shadow: 0 3px rgb(105, 105, 134);
+}
+
+#howmuch-button:hover {
+  background: rgba(139, 43, 46, 0.829);
+}
+
+#howmuch-button:active {
+  background: rgba(117, 29, 29, 0.726);
+  box-shadow: 0 1px rgb(68, 88, 71);
+  transform: translateY(2px);
+}
+
+#buy-button {
+  margin: 5px;
+  background: rgba(165, 24, 24, 0.815);
+  font-family: 'Press Start 2P', cursive;
+  color: rgb(233, 255, 238);
+  border: inset 5px rgba(156, 53, 39, 0.863);
+  border-radius: 20px;
+  box-shadow: 0 3px rgb(105, 105, 134);
+}
+
+#buy-button:hover {
+  background: rgba(139, 43, 46, 0.829);
+}
+
+#buy-button:active {
+  background: rgba(117, 29, 29, 0.726);
   box-shadow: 0 1px rgb(68, 88, 71);
   transform: translateY(2px);
 }
@@ -24,8 +84,10 @@
 
 #cart {
   display: none;
+  text-align: center;
 }
 
 #receipt {
   display: none;
+  text-align: center;
 }

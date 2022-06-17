@@ -18,15 +18,15 @@
   </div>
   <div class="jumbotron jumbotron-fluid">
     <div class="container">
-      <h1>Pizza Time's Pizza Parlor</h1>
+      <h1>Joe's Pizza</h1>
       <h6>As seen on tv in the hit movie Spider-Man 2</h6>
     </div>
   </div>
   <div class="container">
-    <div class="mainPage">
+    <div class="mainPage d-flex justify-content-center">
       <button id="start" class="btn">Start Order!</button>
     </div>
-    <div class="pizzaForm">
+    <div class="pizzaForm d-flex justify-content-center">
       <div class="row">
         <form id="pizza">
           <div class="col-sm-12">
@@ -96,12 +96,13 @@
       </div>
     </div>
     <div id="cart">
-      <h4>Your total is: <span id="pizza-price"></span></h4>
+      <h4>Your current total is: <span id="pizza-price"></span></h4>
       <p id="pizza-price-msg"></p>
     </div>
     <div id="receipt">
       <h4>Your Pizzas For Today:</h4>
         <div class="pizza-item-list">
+          <p id="finalPrice"></p>
         </div>
     </div>
   </div>
