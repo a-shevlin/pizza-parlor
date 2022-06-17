@@ -78,12 +78,15 @@ $(document).ready(function() {
     event.preventDefault();
     let newPizza = getPizza();
     let cost1 = newPizza.finalPrice();
+    $('#cart').fadeIn();
     $('#pizza-price').text("$ " + cost1);
+    console.log("cartClick");
     $('#buy-button').removeAttr('disabled');
   })
-  $('#buy-button').click(function(event) {
+  $('form#pizza').submit(function(event) {
     event.preventDefault();
     let newPizza = getPizza();
+    $('#receipt').fadeIn();
     attachSoldPizzas(newPizza);
     $('#buy-button').prop('disabled', true);
     clearPizzaForm();
@@ -99,27 +102,31 @@ function getPizza() {
   $('input:checkbox[name=topping]:checked').each(function() {
     toppings.push($(this).val());
   });
+  console.log(toppings);
   newPizza.toppings.push(toppings);
+  console.log(newPizza);
   return newPizza;
 }
 
 function attachSoldPizzas(pizza) {
-  const size = document.createElement('ul');
-  size.innerHTML = pizza.size;
-  const sauce = document.createElement('li');
-  sauce.innerHTML = pizza.sauce;
-  const toppings = document.createElement('li');
-  toppings.innerHTML = pizza.toppings;
-  const dip = document.createElement('li');
-  dip.innerHTML = pizza.dipSauce;
-  const price = document.createElement('li');
+  const size = document.createElement('p');
+  size.innerHTML = "A " + pizza.size + "\" Pizza";
+  const sauce = document.createElement('p');
+  sauce.innerHTML = "with " + pizza.sauce;
+  const toppings = document.createElement('p');
+  //toppings.innerHTML = toString(pizza.toppings) + " for toppings.";
+  const dip = document.createElement('p');
+  dip.innerHTML = pizza.dipSauce + " on the side.";
+  const price = document.createElement('p');
   price.innerHTML = "$ " + pizza.priceMsg;
   size.appendChild(sauce);
   size.appendChild(sauce);
-  size.appendChild(toppings);
   size.appendChild(dip);
-  $('#pizzas-items-list').append(size);
-  $('.receipt h4').show();
+  if (pizza.toppings.length > 1) {
+    size.appendChild(toppings);
+  }
+  console.log(size);
+  $('.pizza-item-list').append(size);
 }
 
 function clearPizzaForm() {

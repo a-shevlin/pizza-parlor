@@ -21,3 +21,11 @@
 .pizzaForm {
   display: none;
 }
+
+#cart {
+  display: none;
+}
+
+#receipt {
+  display: none;
+}
